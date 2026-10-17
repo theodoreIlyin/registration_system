@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from pymongo.erros import PyMongoError
+from pymongo.errors import PyMongoError
 import config
 
 orders_collection = None
