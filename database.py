@@ -9,7 +9,7 @@ try:
     client = MongoClient(config.MONGO_URL, serverSelectionTimeoutMS=5000)
     client.admin.command('ping')
 
-    db = client[config.DB_NAMENAME]
+    db = client[config.DB_NAME]
     orders_collection = db['orders']
     users_collection = db['users']
 

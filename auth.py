@@ -39,7 +39,7 @@ def register_user(name, email, phone, password):
         "created_at": datetime.now(),
     })
 
-def autthenticate(login, password):
+def authenticate(login, password):
     login = login.strip().lower()
     user = database.users_collection.find_one(
         {"$or": [{"email": login}, {"phone": normalize_phone(login)}]}
@@ -53,5 +53,5 @@ def autthenticate(login, password):
 def login(user):
     state.current_user = user
 
-def logount():
-    state.current_user =None
+def logout():
+    state.current_user = None
