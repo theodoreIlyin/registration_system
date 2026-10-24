@@ -17,7 +17,7 @@ def build_app():
     root.geometry("900x600")
     root.resizable(False, False)
 
-    # ---------- функции, которым нужны виджеты ----------
+    
     def update_user_label():
         if state.current_user:
             user_label.config(text=f"👤 {state.current_user['name']}")
